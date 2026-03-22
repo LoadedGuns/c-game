@@ -1,3 +1,9 @@
+/*
+Game coded in C using Raylib for visual and audio.
+LEAD DEVELOPER: James Sweetsir
+Project Start Date: 03/22/2026
+*/
+
 #include "raylib.h"
 #include "resource_dir.h"
 
@@ -8,11 +14,22 @@ int main(void)
 
     SearchAndSetResourceDir("resources");
 
+    //Texture Variables
     Texture2D player = LoadTexture("wabbit_alpha.png");
     Vector2 pos = { 400, 250 };
     float speed = 125.0f;
-
     SetTargetFPS(60);
+
+    //Audio Variables
+    InitAudioDevice();
+    if (IsAudioDeviceReady())
+    {
+        printf("Audio Device Ready");
+    }
+    else 
+    {
+        printf("Audio Device Is Not Ready");
+    }
 
     while (!WindowShouldClose())
     {
