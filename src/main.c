@@ -30,6 +30,10 @@ int main(void)
     {
         printf("Audio Device Is Not Ready");
     }
+    SetMasterVolume(2);
+
+    Music main = LoadMusicStream("Scape Main.mp3");
+    PlayMusicStream(main);
 
     while (!WindowShouldClose())
     {
@@ -45,6 +49,7 @@ int main(void)
         BeginDrawing();
         ClearBackground(BLACK);
 
+        UpdateMusicStream(main);
         DrawText("James Sweetsir's Game Made in C with Raylib", 200, 200, 20, WHITE);
         DrawTexture(player, (int)pos.x, (int)pos.y, WHITE);
 
