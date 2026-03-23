@@ -22,14 +22,6 @@ int main(void)
 
     //Audio Variables
     InitAudioDevice();
-    if (IsAudioDeviceReady())
-    {
-        printf("Audio Device Ready");
-    }
-    else 
-    {
-        printf("Audio Device Is Not Ready");
-    }
     SetMasterVolume(2);
 
     Music main = LoadMusicStream("Scape Main.mp3");
