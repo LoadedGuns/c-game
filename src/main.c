@@ -24,7 +24,7 @@ int main(void)
     InitAudioDevice();
     SetMasterVolume(2);
 
-    Music main = LoadMusicStream("Scape Main.mp3");
+    Music main = LoadMusicStream("mainmenu.mp3");
     PlayMusicStream(main);
 
     while (!WindowShouldClose())
